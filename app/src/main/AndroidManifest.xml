@@ -4,11 +4,25 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".CreateParentAccountActivity"></activity>
+        <activity android:name=".ParentHomeActivity" />
+        <activity android:name=".ParentProfileActivity" />
+        <activity android:name=".ParentLoginActivity" />
+        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".CreateBabysitterAccountActivity" />
+        <activity android:name=".BabysitterHomeActivity" />
+        <activity android:name=".BabysitterProfileActivity" />
+        <activity android:name=".BabysitterLoginActivity" />
+        <activity android:name=".DoctorHomeActivity" />
+        <activity android:name=".DoctorProfileActivity" />
+        <activity android:name=".CreateDoctorAccountActivity" />
+        <activity android:name=".DoctorLoginActivity" />
+        <activity android:name=".ContinueAsActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
