@@ -8,6 +8,7 @@ public class NannyDetails {
     String experience;
     String phone;
     String permanentAddress;
+    String zipcode;
     String availablity;
     String profilePicture;
     String preferredDays;
@@ -16,7 +17,9 @@ public class NannyDetails {
     String rateHr;
     String email;
 
-    public NannyDetails(String username, String DOB, String aadharNo, String education, String experience, String phone, String permanentAddress, String availablity, String profilePicture, String preferredDays, String aboutMe, String gender, String rateHr, String email) {
+   public NannyDetails(){}
+
+    public NannyDetails(String username, String DOB, String aadharNo, String education, String experience, String phone, String permanentAddress, String zipcode, String availablity, String profilePicture, String preferredDays, String aboutMe, String gender, String rateHr, String email) {
         this.username = username;
         this.DOB = DOB;
         this.aadharNo = aadharNo;
@@ -24,6 +27,7 @@ public class NannyDetails {
         this.experience = experience;
         this.phone = phone;
         this.permanentAddress = permanentAddress;
+        this.zipcode = zipcode;
         this.availablity = availablity;
         this.profilePicture = profilePicture;
         this.preferredDays = preferredDays;
@@ -87,6 +91,14 @@ public class NannyDetails {
 
     public void setPermanentAddress(String permanentAddress) {
         this.permanentAddress = permanentAddress;
+    }
+
+    public String getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(String zipcode) {
+        this.zipcode = zipcode;
     }
 
     public String getAvailablity() {
