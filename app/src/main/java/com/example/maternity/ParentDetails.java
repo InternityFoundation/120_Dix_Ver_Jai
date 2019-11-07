@@ -1,4 +1,5 @@
 package com.example.maternity;
 
-public class BabyDetails {
+public class ParentDetails {
+
 }
