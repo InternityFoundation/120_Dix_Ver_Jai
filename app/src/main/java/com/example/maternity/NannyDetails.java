@@ -16,10 +16,12 @@ public class NannyDetails {
     String gender;
     String rateHr;
     String email;
+    String latitude;
+    String longitude;
 
    public NannyDetails(){}
 
-    public NannyDetails(String username, String DOB, String aadharNo, String education, String experience, String phone, String permanentAddress, String zipcode, String availablity, String profilePicture, String preferredDays, String aboutMe, String gender, String rateHr, String email) {
+    public NannyDetails(String username, String DOB, String aadharNo, String education, String experience, String phone, String permanentAddress, String zipcode, String availablity, String profilePicture, String preferredDays, String aboutMe, String gender, String rateHr, String email, String latitude, String longitude) {
         this.username = username;
         this.DOB = DOB;
         this.aadharNo = aadharNo;
@@ -35,6 +37,8 @@ public class NannyDetails {
         this.gender = gender;
         this.rateHr = rateHr;
         this.email = email;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getUsername() {
@@ -155,5 +159,21 @@ public class NannyDetails {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 }

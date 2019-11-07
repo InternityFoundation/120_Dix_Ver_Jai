@@ -11,8 +11,12 @@ public class ParentDetails {
     String zipcode;
     String rateHr;
     String description;
+    String profilePicture;
 
-    public ParentDetails(String username, String email, String availablity, String prefferedDays, String genderOfBaby, String permanentAddress, String zipcode, String rateHr, String description) {
+
+    public ParentDetails(){}
+
+    public ParentDetails(String username, String email, String availablity, String prefferedDays, String genderOfBaby, String permanentAddress, String zipcode, String rateHr, String description, String profilePicture) {
         this.username = username;
         this.email = email;
         this.availablity = availablity;
@@ -22,8 +26,8 @@ public class ParentDetails {
         this.zipcode = zipcode;
         this.rateHr = rateHr;
         this.description = description;
+        this.profilePicture = profilePicture;
     }
-    public ParentDetails(){}
 
     public String getUsername() {
         return username;
@@ -95,5 +99,13 @@ public class ParentDetails {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
     }
 }
