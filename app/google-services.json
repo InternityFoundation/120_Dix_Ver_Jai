@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1029551257183",
+    "firebase_url": "https://maternity-d7967.firebaseio.com",
+    "project_id": "maternity-d7967",
+    "storage_bucket": "maternity-d7967.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029551257183:android:911b01a680da8199fecdea",
+        "android_client_info": {
+          "package_name": "com.example.maternity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029551257183-b7ksuu8dbr2jhi2ednemcllga4ofsmp8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.maternity",
+            "certificate_hash": "f6ef91ac350122957ad3e6d739efdec9f8530db6"
+          }
+        },
+        {
+          "client_id": "1029551257183-hu4t1jdg47gvmgu18s8m7599cm2lafkv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCynz_TaSAx4kRXqqaVVBmqRT2yL8NCImU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029551257183-hu4t1jdg47gvmgu18s8m7599cm2lafkv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
