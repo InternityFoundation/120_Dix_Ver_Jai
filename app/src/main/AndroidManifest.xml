@@ -9,7 +9,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".CreateDoctorAccountActivity2"></activity>
+        <activity android:name=".OTPVerificationActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".CreateParentAccountActivity" />
         <activity android:name=".ParentHomeActivity" />
         <activity android:name=".ParentProfileActivity" />
