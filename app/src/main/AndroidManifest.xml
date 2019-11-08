@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateParentAccountActivity"></activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".CreateParentAccountActivity" />
         <activity android:name=".ParentHomeActivity" />
         <activity android:name=".ParentProfileActivity" />
         <activity android:name=".ParentLoginActivity" />
