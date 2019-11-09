@@ -109,15 +109,19 @@ public class LoginActivity extends AppCompatActivity {
                 df.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Intent i;
                         for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
                         {
                             if (dataSnapshot1.getValue().equals(pass))
                             {
-                                Intent i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
+                                i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
                                 i.putExtra("phone", id);
                                 i.putExtra("user", user[0]);
                                 startActivity(i);
                                 flag = true;
+                                break;
+
+
                             }
                         }
                         if (!flag)

@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -32,6 +35,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
 
     EditText otp;
     String codesent;
+    Button verify;
 
     String userLogging, phone;
     FirebaseUser firebaseUser;
@@ -41,8 +45,18 @@ public class OTPVerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otpverification);
         otp = findViewById(R.id.otp);
+        mAuth=FirebaseAuth.getInstance();
+        verify =findViewById(R.id.verify);
         userLogging= getIntent().getStringExtra("user");
         phone = getIntent().getStringExtra("phone");
+        getVerified();
+
+        verify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                verifysignincode();
+            }
+        });
     }
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential)
     {
@@ -55,6 +69,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
                 if (task.isSuccessful())
                 {
 
+                    Log.d("TAG", "onComplete: ");
                     if (userLogging.equals("PARENT"))
                     {
                         Intent i = new Intent(OTPVerificationActivity.this, ParentHomeActivity.class);
@@ -102,6 +117,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
 
+            Log.d("tag", "onCodeSent: "+ s);
             codesent=s;
         }
     };
@@ -118,7 +134,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
                 signInWithPhoneAuthCredential(credential);
             }catch (Exception e)
             {
-                Toast.makeText(this, "failed", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "failed"+e, Toast.LENGTH_SHORT).show();
             }
 
 
