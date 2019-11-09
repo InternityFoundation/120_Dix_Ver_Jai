@@ -8,12 +8,11 @@ public class NannyDetails {
     String experience;
     String phone;
     String permanentAddress;
-    String zipcode;
     String availablity;
     String profilePicture;
-    String preferredDays;
     String aboutMe;
     String gender;
+    String password;
     String rateHr;
     String email;
     String latitude;
@@ -29,11 +28,10 @@ public class NannyDetails {
         this.experience = experience;
         this.phone = phone;
         this.permanentAddress = permanentAddress;
-        this.zipcode = zipcode;
         this.availablity = availablity;
         this.profilePicture = profilePicture;
-        this.preferredDays = preferredDays;
         this.aboutMe = aboutMe;
+        this.password = password;
         this.gender = gender;
         this.rateHr = rateHr;
         this.email = email;
@@ -93,17 +91,7 @@ public class NannyDetails {
         return permanentAddress;
     }
 
-    public void setPermanentAddress(String permanentAddress) {
-        this.permanentAddress = permanentAddress;
-    }
-
-    public String getZipcode() {
-        return zipcode;
-    }
-
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
-    }
+    public void setPermanentAddress(String permanentAddress) { this.permanentAddress = permanentAddress; }
 
     public String getAvailablity() {
         return availablity;
@@ -119,14 +107,6 @@ public class NannyDetails {
 
     public void setProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
-    }
-
-    public String getPreferredDays() {
-        return preferredDays;
-    }
-
-    public void setPreferredDays(String preferredDays) {
-        this.preferredDays = preferredDays;
     }
 
     public String getAboutMe() {
@@ -173,7 +153,15 @@ public class NannyDetails {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(String password) {
         this.longitude = longitude;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
