@@ -2,11 +2,14 @@ package com.example.maternity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -20,6 +23,22 @@ public class SplashScreenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         logo = findViewById(R.id.splashscreenlogo);
         fadeIn(logo);
+        String user = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("USER", "");
+        String phone = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).getString("PHONE", "");
+        if (user.equals("") || phone.equals(""))
+        {
+            startActivity(new Intent(this, LoginActivity.class));
+        }else if(user.toLowerCase().equals("parent")){
+            startActivity(new Intent(this, MainActivity.class).putExtra("id", phone));
+        }else if (user.toLowerCase().equals("doctor")){
+            startActivity(new Intent(this, DoctorHomeActivity.class).putExtra("id", phone));
+        }else if (user.toLowerCase().equals("babysitter")){
+            startActivity(new Intent(this, BabysitterHomeActivity.class).putExtra("id", phone));
+        }else{
+            Toast.makeText(this, "Something went wrong.", Toast.LENGTH_SHORT).show();
+        }
+
+
     }
 
     public void fadeIn(final ImageView appLogoDesc) {
