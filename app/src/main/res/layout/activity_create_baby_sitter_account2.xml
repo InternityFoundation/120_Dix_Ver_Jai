@@ -33,7 +33,7 @@
         android:padding="8dp"
         android:layout_marginTop="4dp"
         android:inputType="textMultiLine"
-        android:id="@+id/userAboutme"
+        android:id="@+id/babySitterAboutme"
         android:hint="About Me"
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
@@ -42,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#ffffff"
-        android:layout_below="@+id/userAboutme"
+        android:layout_below="@+id/babySitterAboutme"
         android:textStyle="bold"
         android:text="Gender: "
         android:layout_marginTop="12dp"
@@ -120,7 +120,7 @@
         android:textStyle="bold"/>
 
     <EditText
-        android:id="@+id/userPassword"
+        android:id="@+id/babysitter_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/locationCheck"
@@ -136,14 +136,15 @@
         android:layout_height="wrap_content"
         android:textColor="@color/red"
         android:padding="6dp"
-        android:layout_below="@+id/userPassword"
+        android:layout_below="@+id/babysitter_Password"
         android:text="THERE WILL AN IN-PERSON VERIFICATION OF ALL THE DETAILS PROVIDED AND AFTER SUCCESSFUL COMPLETION OF ALL THE STEPS YOUR ACCOUNT WILL BE VALIDATED."
-        android:id="@+id/msg"/>
+        android:id="@+id/bs_msg"/>
 
     <Button
+        android:id="@+id/babysitter_create_account"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/msg"
+        android:layout_below="@+id/bs_msg"
         android:background="@drawable/btn_bg_cyan"
         android:text="CREATE account"
         android:textColor="#ffffff"
