@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     AlertDialog.Builder alertDialog;
-    private String[] user;
+
     private boolean flag = false;
 
     @Override
@@ -77,8 +78,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        final String[] user = new String[1];
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+
 
 
             @Override
@@ -99,6 +103,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final String id = phone.getText().toString();
                 final String pass = password.getText().toString();
+                Log.d("tag", "onClick: "+pass);
 
                 DatabaseReference df = databaseReference.child(user[0]).child(id);
                 df.addValueEventListener(new ValueEventListener() {
@@ -106,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
                         {
-                            if (dataSnapshot1.getKey().equals(pass))
+                            if (dataSnapshot1.getValue().equals(pass))
                             {
                                 Intent i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
                                 i.putExtra("phone", id);
