@@ -18,17 +18,23 @@
         <activity android:name=".ParentHomeActivity" />
         <activity android:name=".ParentProfileActivity" />
         <activity android:name=".ParentLoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        <activity android:name=".CreateBabysitterAccountActivity">
+        </activity>
+        <activity android:name=".BabysitterHomeActivity" />
+        <activity android:name=".BabysitterProfileActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateBabysitterAccountActivity">
-        </activity>
-        <activity android:name=".BabysitterHomeActivity" />
-        <activity android:name=".BabysitterProfileActivity" />
         <activity android:name=".BabysitterLoginActivity" />
         <activity android:name=".DoctorHomeActivity" />
         <activity android:name=".DoctorProfileActivity" />
