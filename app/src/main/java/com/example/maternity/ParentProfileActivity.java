@@ -27,11 +27,11 @@ public class ParentProfileActivity extends AppCompatActivity {
 
         USER = (TextView)findViewById(R.id.tvuser);
         EMAIL = (TextView)findViewById(R.id.tvemail);
-        PHONE =  (TextView)findViewById(R.id.tvphone);
-        AVAILABILITY = (TextView)findViewById(R.id.tvavail);
+        PHONE =  (TextView)findViewById(R.id.doc_phone);
+        AVAILABILITY = (TextView)findViewById(R.id.doc_permanent_address);
         GOB = (TextView)findViewById(R.id.tvgob);
         ADDRESS = (TextView)findViewById(R.id.tvaddress);
-        ZIP = (TextView)findViewById(R.id.tvzip);
+        ZIP = (TextView)findViewById(R.id.doc_zip);
         RATE = (TextView)findViewById(R.id.tvrate);
         DESC = (TextView)findViewById(R.id.tvdesc);
 

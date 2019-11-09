@@ -38,7 +38,7 @@
             android:layout_centerHorizontal="true"
             android:hint="email" />
         <TextView
-            android:id="@+id/tvphone"
+            android:id="@+id/doc_phone"
             android:layout_below="@id/tvemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,8 +46,8 @@
             android:layout_centerHorizontal="true"
             android:hint="phone" />
         <TextView
-            android:id="@+id/tvavail"
-            android:layout_below="@id/tvphone"
+            android:id="@+id/doc_permanent_address"
+            android:layout_below="@id/doc_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
@@ -55,7 +55,7 @@
             android:hint="available(part/full time)" />
         <TextView
             android:id="@+id/tvgob"
-            android:layout_below="@id/tvavail"
+            android:layout_below="@id/doc_permanent_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -80,7 +80,7 @@
             android:hint="rate/hr" />
 
         <TextView
-            android:id="@+id/tvzip"
+            android:id="@+id/doc_zip"
             android:layout_below="@id/tvrate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
             android:hint="zipcode"/>
         <TextView
             android:id="@+id/tvdesc"
-            android:layout_below="@id/tvzip"
+            android:layout_below="@id/doc_zip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
