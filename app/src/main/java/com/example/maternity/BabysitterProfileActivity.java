@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +27,7 @@ public class BabysitterProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_babysitter_profile);
 
+        final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
 
             USER = (TextView)findViewById(R.id.bbysittername);
@@ -41,24 +44,31 @@ public class BabysitterProfileActivity extends AppCompatActivity {
 
 
             firebaseDatabase = FirebaseDatabase.getInstance();
-            dbref = firebaseDatabase.getReference("USERS").child("NANNY").child("919521420343");
+            dbref = firebaseDatabase.getReference("USERS").child("NANNY");
             dbref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    if(dataSnapshot)
-                    NannyDetails  nannyDetails = dataSnapshot.getValue(NannyDetails.class);
-                    username = nannyDetails.getUsername();
-                    email = nannyDetails.getEmail();
-                    phone = nannyDetails.getPhone();
-                    aadhar = nannyDetails.getAadharNo();
-                    dob = nannyDetails.getDOB();
-                    Address = nannyDetails.getPermanentAddress();
-                    rateHR = nannyDetails.getRateHr();
-                    aboutME = nannyDetails.getAboutMe();
-                    availabity = nannyDetails.getAvailablity();
-                    gender = nannyDetails.getGender();
-                    latitude = nannyDetails.getLatitude();
-                    longitude = nannyDetails.getLongitude();
+                    for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
+                    {
+                        assert firebaseUser != null;
+                        if (dataSnapshot1.getKey().equals(firebaseUser.getPhoneNumber()))
+                        {
+                            NannyDetails  nannyDetails = dataSnapshot1.getValue(NannyDetails.class);
+                            username = nannyDetails.getUsername();
+                            email = nannyDetails.getEmail();
+                            phone = nannyDetails.getPhone();
+                            aadhar = nannyDetails.getAadharNo();
+                            dob = nannyDetails.getDOB();
+                            Address = nannyDetails.getPermanentAddress();
+                            rateHR = nannyDetails.getRateHr();
+                            aboutME = nannyDetails.getAboutMe();
+                            availabity = nannyDetails.getAvailablity();
+                            gender = nannyDetails.getGender();
+                            latitude = nannyDetails.getLatitude();
+                            longitude = nannyDetails.getLongitude();
+                        }
+                    }
+
 
 
 

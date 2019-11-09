@@ -89,9 +89,9 @@ public class OTPVerificationActivity extends AppCompatActivity {
                         i.putExtra("user", userLogging);
                         i.putExtra("phone", phone);
                         startActivity(i);
-                    }else  if (userLogging.equals("BABYSITTER"))
+                    }else  if (userLogging.equals("NANNY"))
                     {
-                        Intent i = new Intent(OTPVerificationActivity.this, BabysitterHomeActivity.class);
+                        Intent i = new Intent(OTPVerificationActivity.this, BabysitterProfileActivity.class);
                         i.putExtra("user", userLogging);
                         i.putExtra("phone", phone);
                         startActivity(i);
