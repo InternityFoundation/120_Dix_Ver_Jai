@@ -58,7 +58,7 @@ public class FeaturedFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("INFO");
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("DAILY");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

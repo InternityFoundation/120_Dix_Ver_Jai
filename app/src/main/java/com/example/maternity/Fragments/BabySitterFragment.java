@@ -1,6 +1,7 @@
 package com.example.maternity.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,11 +9,15 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.maternity.LoginActivity;
+import com.example.maternity.MainActivity;
 import com.example.maternity.NannyDetails;
 import com.example.maternity.R;
 import com.example.maternity.RecyclerAdapterForBabysitterNearMe;
@@ -96,4 +101,21 @@ public class BabySitterFragment extends Fragment {
         return view;
     }
 
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+
+        if (id == R.id.action_settings) {
+
+            PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext()).edit().putString("USER", "").apply();
+            PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext()).edit().putString("PHONE", "").apply();
+            startActivity(new Intent(getContext(), LoginActivity.class));
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
 }

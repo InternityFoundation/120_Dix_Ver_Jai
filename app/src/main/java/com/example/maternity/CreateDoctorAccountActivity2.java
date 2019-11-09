@@ -139,6 +139,8 @@ public class CreateDoctorAccountActivity2 extends AppCompatActivity {
                     doctorDetails.setLatitude(locationLati);
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("USERS").child("DOCTOR").child(doctorDetails.getPhone());
                     databaseReference.setValue(doctorDetails);
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
                 }
             }
         });

@@ -42,7 +42,7 @@
             android:id="@+id/userPassword"
             android:background="@drawable/btn_bg_purple"
             android:padding="8dp"
-            android:textColorHint="#ffffff"
+            android:textColorHint="#80ffffff"
             android:hint="Password"
             android:textColor="#ffffff"
             />

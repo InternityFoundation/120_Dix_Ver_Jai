@@ -83,18 +83,21 @@ public class OTPVerificationActivity extends AppCompatActivity {
                         i.putExtra("user", userLogging);
                         i.putExtra("phone", phone);
                         startActivity(i);
+                        finish();
                     }else if (userLogging.equals("DOCTOR"))
                     {
                         Intent i = new Intent(OTPVerificationActivity.this, DoctorHomeActivity.class);
                         i.putExtra("user", userLogging);
                         i.putExtra("phone", phone);
                         startActivity(i);
+                        finish();
                     }else  if (userLogging.equals("NANNY"))
                     {
                         Intent i = new Intent(OTPVerificationActivity.this, BabysitterProfileActivity.class);
                         i.putExtra("user", userLogging);
                         i.putExtra("phone", phone);
                         startActivity(i);
+                        finish();
                     }
 
 
