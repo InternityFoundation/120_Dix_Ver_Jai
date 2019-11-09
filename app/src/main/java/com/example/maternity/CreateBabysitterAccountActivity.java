@@ -29,7 +29,7 @@ public class CreateBabysitterAccountActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String username2, dob2, aadhar2, phone2, email2, address2, rph2;
+                String username2, dob2, aadhar2, phone2, email2, address2, rph2, aboutME;
                 username2 = String.valueOf(username.getText());
                 dob2 = String.valueOf(dob.getText());
                 aadhar2 = String.valueOf(aadhar.getText());
