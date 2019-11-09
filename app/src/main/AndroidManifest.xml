@@ -12,13 +12,13 @@
         <activity android:name=".CreateBabySitterAccount2"></activity>
         <activity android:name=".CreateDoctorAccountActivity2" />
         <activity android:name=".OTPVerificationActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".CreateBabysitterAccountActivity" />
         <activity android:name=".CreateParentAccountActivity" />
         <activity android:name=".ParentHomeActivity" />
         <activity android:name=".ParentProfileActivity" />
         <activity android:name=".ParentLoginActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".CreateBabysitterAccountActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

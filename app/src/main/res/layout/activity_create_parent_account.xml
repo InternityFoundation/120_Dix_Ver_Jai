@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
     android:layout_height="match_parent"
     tools:context=".CreateParentAccountActivity">
 
@@ -10,7 +11,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp">
 
 
         <!--<ImageView
@@ -30,15 +32,18 @@
             android:layout_marginTop="40dp"
             app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            android:src="@drawable/logo" />
+            android:src="@drawable/profilepic" />
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="8dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:hint="useranme"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/email"
@@ -50,10 +55,13 @@
 
         <EditText
             android:id="@+id/email"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:hint="email"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/gob"
@@ -63,39 +71,51 @@
 
         <EditText
             android:id="@+id/pass"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
             android:hint="password"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:inputType="textPassword" />
 
         <EditText
             android:id="@+id/phone"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:hint="phone_no"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/availibility"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:hint="available(part-time/full-time)"
             android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/gob"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
             android:hint="gender (baby)"
             android:inputType="textPersonName"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             app:layout_constraintBottom_toTopOf="@+id/address"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
@@ -103,11 +123,14 @@
 
         <EditText
             android:id="@+id/address"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
             android:hint="address"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:inputType="textPostalAddress"
             app:layout_constraintBottom_toTopOf="@+id/rate"
             app:layout_constraintEnd_toEndOf="parent"
@@ -118,8 +141,11 @@
             android:id="@+id/zipcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:hint="zipcode"
             android:inputType="textPersonName" />
 
@@ -127,9 +153,12 @@
             android:id="@+id/rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
+            android:layout_marginBottom="4dp"
             android:ems="10"
             android:hint="Rate/hr"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.08"
@@ -139,9 +168,12 @@
         <EditText
             android:id="@+id/desc"
             android:layout_width="match_parent"
-            android:layout_height="185dp"
-            android:layout_marginBottom="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:ems="10"
+            android:padding="8dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_bg_purple"
             android:gravity="start|top"
             android:hint="description/requirement"
             android:inputType="textMultiLine" />
@@ -151,6 +183,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:background="@drawable/btn_bg_cyan"
             android:layout_marginBottom="40dp"
             android:text="submit" />
     </LinearLayout>
