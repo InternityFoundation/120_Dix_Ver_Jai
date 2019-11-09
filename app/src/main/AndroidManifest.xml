@@ -2,11 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.maternity">
 
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -17,19 +13,20 @@
         <activity android:name=".CreateBabySitterAccount2"></activity>
         <activity android:name=".CreateDoctorAccountActivity2" />
         <activity android:name=".OTPVerificationActivity" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".CreateParentAccountActivity" />
         <activity android:name=".ParentHomeActivity" />
         <activity android:name=".ParentProfileActivity" />
         <activity android:name=".ParentLoginActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".CreateBabysitterAccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".CreateBabysitterAccountActivity">
         </activity>
         <activity android:name=".BabysitterHomeActivity" />
         <activity android:name=".BabysitterProfileActivity" />
@@ -39,7 +36,7 @@
         <activity android:name=".CreateDoctorAccountActivity" />
         <activity android:name=".DoctorLoginActivity" />
         <activity android:name=".ContinueAsActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".SplashScreenActivity">
 
         </activity>
     </application>
