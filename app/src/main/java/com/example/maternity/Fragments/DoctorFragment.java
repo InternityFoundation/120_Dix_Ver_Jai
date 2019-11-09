@@ -1,6 +1,7 @@
 package com.example.maternity.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.maternity.DoctorDetails;
+import com.example.maternity.MapsActivity;
 import com.example.maternity.NannyDetails;
 import com.example.maternity.R;
 import com.example.maternity.RecyclerAdapterForBabysitterNearMe;
@@ -90,7 +92,12 @@ public class DoctorFragment extends Fragment {
             }
         });
 
-
+        view.findViewById(R.id.viewOnMap).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), MapsActivity.class));
+            }
+        });
 
         return view;
     }

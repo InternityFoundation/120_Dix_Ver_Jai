@@ -5,9 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.BabySitterFragment">
 
+
    <androidx.recyclerview.widget.RecyclerView
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+       android:layout_marginBottom="52dp"
        android:id="@+id/recyclerview" />
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:id="@+id/viewOnMap"
+       android:background="@drawable/btn_bg_cyan"
+       android:text="view on map"
+       android:layout_marginBottom="4dp"
+       android:layout_gravity="bottom"/>
 
 </FrameLayout>

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -69,6 +70,7 @@ public class CreateParentAccountActivity extends AppCompatActivity {
                     progressdialog.show();
                     sendUserData();
                     progressdialog.dismiss();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
 
 
 

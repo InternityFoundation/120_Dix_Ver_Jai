@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 
 import com.example.maternity.LoginActivity;
 import com.example.maternity.MainActivity;
+import com.example.maternity.MapsActivity;
 import com.example.maternity.NannyDetails;
 import com.example.maternity.R;
 import com.example.maternity.RecyclerAdapterForBabysitterNearMe;
@@ -94,6 +95,13 @@ public class BabySitterFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        view.findViewById(R.id.viewOnMap).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), MapsActivity.class));
             }
         });
 

@@ -2,6 +2,7 @@ package com.example.maternity;
 
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -163,6 +164,8 @@ public class CreateBabySitterAccount2 extends AppCompatActivity {
                             DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("USERS").child("NANNY").child(nannyDetails.getPhone());
                             databaseReference.setValue(nannyDetails);
                             Toast.makeText(CreateBabySitterAccount2.this, "" + nannyDetails, Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                            finish();
                         }
                     }
                 });
