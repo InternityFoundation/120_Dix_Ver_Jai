@@ -72,7 +72,7 @@ public class OTPVerificationActivity extends AppCompatActivity {
                     Log.d("TAG", "onComplete: ");
                     if (userLogging.equals("PARENT"))
                     {
-                        Intent i = new Intent(OTPVerificationActivity.this, ParentHomeActivity.class);
+                        Intent i = new Intent(OTPVerificationActivity.this, MainActivity.class);
                         i.putExtra("user", userLogging);
                         i.putExtra("phone", phone);
                         startActivity(i);
