@@ -4,8 +4,6 @@ public class NannyDetails {
     String username;
     String DOB;
     String aadharNo;
-    String education;
-    String experience;
     String phone;
     String permanentAddress;
     String availablity;
@@ -20,12 +18,10 @@ public class NannyDetails {
 
    public NannyDetails(){}
 
-    public NannyDetails(String username, String DOB, String aadharNo, String education, String experience, String phone, String permanentAddress, String zipcode, String availablity, String profilePicture, String preferredDays, String aboutMe, String gender, String rateHr, String email, String latitude, String longitude) {
+    public NannyDetails(String username, String DOB, String aadharNo, String phone, String permanentAddress, String availablity, String profilePicture, String aboutMe, String password, String gender, String rateHr, String email, String latitude, String longitude) {
         this.username = username;
         this.DOB = DOB;
         this.aadharNo = aadharNo;
-        this.education = education;
-        this.experience = experience;
         this.phone = phone;
         this.permanentAddress = permanentAddress;
         this.availablity = availablity;
@@ -61,22 +57,6 @@ public class NannyDetails {
 
     public void setAadharNo(String aadharNo) {
         this.aadharNo = aadharNo;
-    }
-
-    public String getEducation() {
-        return education;
-    }
-
-    public void setEducation(String education) {
-        this.education = education;
-    }
-
-    public String getExperience() {
-        return experience;
-    }
-
-    public void setExperience(String experience) {
-        this.experience = experience;
     }
 
     public String getPhone() {

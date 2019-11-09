@@ -38,6 +38,7 @@
             android:id="@+id/otp"
             android:background="@drawable/btn_bg_purple"
             android:padding="12dp"
+            android:inputType="number"
             android:textColor="#ffffff"
             android:hint="OTP"
             android:textColorHint="#ffffff"

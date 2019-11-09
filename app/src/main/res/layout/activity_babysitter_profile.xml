@@ -1,9 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BabysitterProfileActivity">
+    tools:context=".ParentProfileActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/imageViewsitter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        android:src="@drawable/profilepic"
+        />
+
+    <TextView
+        android:id="@+id/bbysittername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewsitter"
+        android:hint="username"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+
+        />
+
+    <TextView
+        android:id="@+id/bbysitteremail"
+        android:layout_below="@id/bbysittername"
+        android:layout_width="wrap_content"
+        android:padding="8dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="email" />
+    <TextView
+        android:id="@+id/bbysitterphone"
+        android:layout_below="@id/bbysitteremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:hint="phone" />
+
+
+
+    <TextView
+        android:id="@+id/bbysittegender"
+        android:hint="gender"
+        android:layout_below="@id/bbysitterphone"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         />
+
+    <EditText
+        android:id="@+id/bbysitteravail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/bbysittegender"
+        android:hint="available"
+         />
+
+    <EditText
+        android:id="@+id/bbysitterlocation"
+        android:layout_below="@+id/bbysitteravail"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="location"
+        android:inputType="textPersonName"
+         />
+
+    <TextView
+        android:id="@+id/bbysitteraadhar"
+        android:layout_below="@id/bbysitterlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:hint="aadhar number" />
+    <TextView
+        android:id="@+id/bbysitterdob"
+        android:layout_below="@id/bbysitteraadhar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:hint="DOB" />
+    <TextView
+        android:id="@+id/bbysitteraddress"
+        android:layout_below="@id/bbysitterdob"
+        android:layout_width="wrap_content"
+        android:padding="8dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="address" />
+
+    <TextView
+        android:id="@+id/bbysitterrate"
+        android:layout_below="@+id/bbysitteraddress"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="rate/hr" />
+
+
+
+
+    <TextView
+        android:id="@+id/aboutme"
+        android:layout_below="@id/bbysitterrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_centerHorizontal="true"
+        android:hint="About me" />
+
+
+
+
+</RelativeLayout>

@@ -19,7 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class CreateParentAccountActivity extends AppCompatActivity {
-    String username, email, phone_no, password, availabity, genderOfBaby, permanentAddress, zipCode, rateHR, description, profilePic;
+    String username, email, phone_no, password, availability, genderOfBaby, permanentAddress, zipCode, rateHR, description, profilePic;
     private EditText USERNAME, EMAIL, PASSWORD, AVAILABILTY, SEX, ADDRESS, ZIPCODE, RATE_HR, DESC, PHONE;
     private Button SUBMIT;
     private ImageView IMG;
@@ -59,7 +59,7 @@ public class CreateParentAccountActivity extends AppCompatActivity {
                     email = EMAIL.getText().toString().trim();
                     password = PASSWORD.getText().toString().trim();
                     phone_no = PHONE.getText().toString().trim();
-                    availabity = AVAILABILTY.getText().toString().trim();
+                    availability = AVAILABILTY.getText().toString().trim();
                     genderOfBaby = SEX.getText().toString().trim();
                     permanentAddress = ADDRESS.getText().toString().trim();
                     zipCode = ZIPCODE.getText().toString().trim();
@@ -110,10 +110,7 @@ public class CreateParentAccountActivity extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         final DatabaseReference myref = firebaseDatabase.getReference("USERS").child("PARENT").child(phone_no);
 
-        myref.setValue(new ParentDetails(username,email,availabity,genderOfBaby,permanentAddress,zipCode,rateHR,description,profilePic,password ));
-
-
-
+        myref.setValue(new ParentDetails(username,email,phone_no, availability,genderOfBaby,permanentAddress,zipCode,rateHR,description,profilePic,password ));
 
 
 
