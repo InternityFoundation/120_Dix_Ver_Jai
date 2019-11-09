@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateDoctorAccountActivity">
+    android:background="@color/colorPrimary"
+    tools:context=".CreateDoctorAccountActivity"
+    android:paddingHorizontal="8dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_above="@+id/relativeLayout"
+        android:src="@drawable/logo_transparent"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/relativeLayout"
+        android:padding="2dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Name"
+            android:id="@+id/username"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Registration Number"
+            android:id="@+id/registrationNumber"
+            android:layout_below="@+id/username"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Phone Number"
+            android:text="+91"
+            android:id="@+id/userPhoneNumber"
+            android:layout_below="@+id/registrationNumber"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Experience"
+            android:id="@+id/experience"
+            android:layout_below="@+id/userPhoneNumber"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Email"
+            android:id="@+id/userEmail"
+            android:layout_below="@+id/experience"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Permanent Address"
+            android:id="@+id/userPermanentAddress"
+            android:layout_below="@+id/userEmail"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_purple"
+            android:padding="8dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="Zipcode"
+            android:id="@+id/userZipcode"
+            android:inputType="number"
+            android:layout_below="@+id/userPermanentAddress"
+            />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userZipcode"
+            android:background="@drawable/btn_bg_cyan"
+            android:text="Continue"
+            android:padding="2dp"
+            android:id="@+id/continueProfile"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

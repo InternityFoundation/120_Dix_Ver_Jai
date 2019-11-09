@@ -9,11 +9,14 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateParentAccountActivity"></activity>
+        <activity android:name=".CreateDoctorAccountActivity2"></activity>
+        <activity android:name=".OTPVerificationActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".CreateParentAccountActivity" />
         <activity android:name=".ParentHomeActivity" />
         <activity android:name=".ParentProfileActivity" />
         <activity android:name=".ParentLoginActivity" />
-        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".CreateBabysitterAccountActivity" />
         <activity android:name=".BabysitterHomeActivity" />
         <activity android:name=".BabysitterProfileActivity" />
@@ -23,7 +26,7 @@
         <activity android:name=".CreateDoctorAccountActivity" />
         <activity android:name=".DoctorLoginActivity" />
         <activity android:name=".ContinueAsActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

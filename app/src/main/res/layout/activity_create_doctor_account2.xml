@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="8dp"
+    tools:context=".CreateDoctorAccountActivity2">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:id="@+id/profilePicture"
+        android:src="@drawable/profilepic"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/profilePicture"
+        android:layout_centerHorizontal="true"
+        android:text="Add profile picture."
+        android:textStyle="bold"
+        android:id="@+id/propicmsg"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/propicmsg"
+        android:background="@drawable/btn_bg_purple"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:inputType="textMultiLine"
+        android:id="@+id/userAboutme"
+        android:hint="About Me"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:layout_below="@+id/userAboutme"
+        android:textStyle="bold"
+        android:text="Gender: "
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/gender"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gender"
+        android:padding="6dp"
+        android:id="@+id/genderRadioButton">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/radio"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+    </RadioGroup>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderRadioButton"
+        android:text="I agree to share my Hospital Location."
+        android:textColor="#ffffff"
+        android:id="@+id/locationCheck"
+        android:textStyle="bold"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationCheck"
+        android:background="@drawable/btn_bg_purple"
+        android:padding="8dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:layout_marginTop="6dp"
+        android:hint="Create Password"
+        android:id="@+id/userPassword"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:padding="6dp"
+        android:layout_below="@+id/userPassword"
+        android:text="THERE WILL AN IN-PERSON VERIFICATION OF ALL THE DETAILS PROVIDED AND AFTER SUCCESSFUL COMPLETION OF ALL THE STEPS YOUR ACCOUNT WILL BE VALIDATED."
+        android:id="@+id/msg"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/msg"
+        android:background="@drawable/btn_bg_cyan"
+        android:text="CREATE account"
+        android:textColor="#ffffff"
+        android:padding="2dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"/>
+
+</RelativeLayout>
