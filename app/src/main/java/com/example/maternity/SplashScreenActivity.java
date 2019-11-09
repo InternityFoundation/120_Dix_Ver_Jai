@@ -32,8 +32,8 @@ public class SplashScreenActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class).putExtra("id", phone));
         }else if (user.toLowerCase().equals("doctor")){
             startActivity(new Intent(this, DoctorHomeActivity.class).putExtra("id", phone));
-        }else if (user.toLowerCase().equals("babysitter")){
-            startActivity(new Intent(this, BabysitterHomeActivity.class).putExtra("id", phone));
+        }else if (user.toLowerCase().equals("nanny")){
+            startActivity(new Intent(this, BabysitterProfileActivity.class).putExtra("id", phone));
         }else{
             Toast.makeText(this, "Something went wrong.", Toast.LENGTH_SHORT).show();
         }

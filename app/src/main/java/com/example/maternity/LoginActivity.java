@@ -105,34 +105,69 @@ public class LoginActivity extends AppCompatActivity {
                 final String pass = password.getText().toString();
                 Log.d("tag", "onClick: "+pass);
 
-                DatabaseReference df = databaseReference.child(user[0]).child(id);
+                DatabaseReference df = databaseReference.child(user[0]);
                 df.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         Intent i;
-                        for (DataSnapshot dataSnapshot1:dataSnapshot.getChildren())
+                        for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                         {
-                            if (dataSnapshot1.getValue().equals(pass))
+                            Log.d("TAG", "onDataChange: "+dataSnapshot1.getKey());
+
+                            if (dataSnapshot1.getKey().equals(id))
                             {
-                                i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
-                                i.putExtra("phone", id);
-                                i.putExtra("user", user[0]);
-                                startActivity(i);
-                                flag = true;
-                                break;
+                                //Log.d("TAG", "onDataChange: "+id);
+                                if (user[0].equals("NANNY"))
+                                {
+                                    NannyDetails nannyDetails = dataSnapshot1.getValue(NannyDetails.class);
+                                    if (nannyDetails.getPassword().equals(pass))
+                                    {
+                                        i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
+                                        i.putExtra("phone", id);
+                                        i.putExtra("user", user[0]);
+                                        startActivity(i);
+                                        flag = true;
+                                        finish();
+                                    }
+                                }else if (user[0].equals("PARENT"))
+                                {
+                                    ParentDetails nannyDetails = dataSnapshot1.getValue(ParentDetails.class);
+                                    if (nannyDetails.getPassword().equals(pass))
+                                    {
+                                        i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
+                                        i.putExtra("phone", id);
+                                        i.putExtra("user", user[0]);
+                                        startActivity(i);
+                                        flag = true;
+                                        finish();
+                                    }
+
+                                }else if (user[0].equals("DOCTOR"))
+                                {
+                                    DoctorDetails nannyDetails = dataSnapshot1.getValue(DoctorDetails.class);
+                                    if (nannyDetails.getPassword().equals(pass))
+                                    {
+                                        i = new Intent(LoginActivity.this, OTPVerificationActivity.class);
+                                        i.putExtra("phone", id);
+                                        i.putExtra("user", user[0]);
+                                        startActivity(i);
+                                        flag = true;
+                                        finish();
+                                    }
+
+                                }
+
 
 
                             }
                         }
-                        if (!flag)
-                        {
-                            Toast.makeText(LoginActivity.this, "check password", Toast.LENGTH_SHORT).show();
-                        }
+
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                        Toast.makeText(LoginActivity.this, "", Toast.LENGTH_SHORT).show();
                     }
                 });
 
