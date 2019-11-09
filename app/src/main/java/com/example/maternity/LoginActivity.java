@@ -127,7 +127,7 @@ public class LoginActivity extends AppCompatActivity {
                                         i.putExtra("user", user[0]);
                                         startActivity(i);
                                         flag = true;
-                                        finish();
+                                        //finish();
                                     }
                                 }else if (user[0].equals("PARENT"))
                                 {
@@ -139,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                                         i.putExtra("user", user[0]);
                                         startActivity(i);
                                         flag = true;
-                                        finish();
+                                        //finish();
                                     }
 
                                 }else if (user[0].equals("DOCTOR"))
@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity {
                                         i.putExtra("user", user[0]);
                                         startActivity(i);
                                         flag = true;
-                                        finish();
+                                        //finish();
                                     }
 
                                 }
