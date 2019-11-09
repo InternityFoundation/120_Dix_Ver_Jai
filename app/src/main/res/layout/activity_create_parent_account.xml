@@ -15,14 +15,6 @@
         android:paddingHorizontal="16dp">
 
 
-        <!--<ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/username"
-        app:srcCompat="@drawable/logo" >-->
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/imageView"

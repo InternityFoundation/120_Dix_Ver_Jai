@@ -16,8 +16,8 @@ import com.google.firebase.database.ValueEventListener;
 public class ParentProfileActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference dbref;
-    String username, email, availabity, genderOfBaby, permanentAddress, zipCode, rateHR, description, profilePic;
-    private TextView tv;
+    String username, email, availabity, genderOfBaby, permanentAddress, zipCode, rateHR, phone, description, profilePic;
+    private TextView USER, EMAIL, AVAILABILITY, GOB, ADDRESS, ZIP, RATE, DESC,PHONE;
 
 
     @Override
@@ -25,20 +25,41 @@ public class ParentProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parent_profile);
 
+        USER = (TextView)findViewById(R.id.tvuser);
+        EMAIL = (TextView)findViewById(R.id.tvemail);
+        PHONE =  (TextView)findViewById(R.id.tvphone);
+        AVAILABILITY = (TextView)findViewById(R.id.tvavail);
+        GOB = (TextView)findViewById(R.id.tvgob);
+        ADDRESS = (TextView)findViewById(R.id.tvaddress);
+        ZIP = (TextView)findViewById(R.id.tvzip);
+        RATE = (TextView)findViewById(R.id.tvrate);
+        DESC = (TextView)findViewById(R.id.tvdesc);
+
         firebaseDatabase = FirebaseDatabase.getInstance();
-        dbref = firebaseDatabase.getReference("USERS").child("PARENT").child("+919521420343");
+        dbref = firebaseDatabase.getReference("USERS").child("PARENT").child("8126099087");
         dbref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 ParentDetails  parentDetails = dataSnapshot.getValue(ParentDetails.class);
                 username = parentDetails.getUsername();
                 email = parentDetails.getEmail();
+                phone = parentDetails.getPhone();
                 genderOfBaby = parentDetails.getGenderOfBaby();
                 availabity = parentDetails.getAvailablity();
                 permanentAddress = parentDetails.getPermanentAddress();
                 zipCode = parentDetails.getZipcode();
                 rateHR = parentDetails.getRateHr();
                 description = parentDetails.getDescription();
+
+                USER.setText("Username: " + username);
+                EMAIL.setText("Email: " + email);
+                PHONE.setText("Phone: " + phone);
+                AVAILABILITY.setText("Availability: " + availabity);
+                GOB.setText("Gender(Baby): " + genderOfBaby);
+                ADDRESS.setText("Address: " + permanentAddress);
+                ZIP.setText("Zipcode: " + zipCode);
+                RATE.setText("Rate/hr: " + rateHR);
+                DESC.setText("Description/requirements: " + description);
 
 
             }
