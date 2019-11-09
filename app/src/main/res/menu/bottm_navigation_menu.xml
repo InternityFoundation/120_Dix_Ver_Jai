@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/babysitter"
+        android:icon="@drawable/icon_babysitter"
+        android:title="Nanny"/>
+    <item
+        android:id="@+id/doctor"
+        android:title="Doctor"
+        android:icon="@drawable/icon_doctor"/>
+    <item
+        android:id="@+id/featured"
+        android:icon="@drawable/icon_featured"
+        android:title="Featured"/>
+</menu>
