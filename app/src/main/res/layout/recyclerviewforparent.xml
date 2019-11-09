@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/btn_bg_yellow"
+    android:paddingVertical="4dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="18dp"
+        android:id="@+id/ageGroup"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="ageGroup"
+        android:gravity="center"
+        android:padding="4dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorGrayGreen"
+        android:textSize="28dp"
+        android:id="@+id/whatToFeed"
+        android:layout_centerHorizontal="true"
+        android:text="whatToFeed"
+        android:gravity="center"
+        android:padding="4dp"
+        android:layout_below="@+id/ageGroup"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/colorLightBlue"
+        android:textSize="24dp"
+        android:id="@+id/otherInfo"
+        android:layout_centerHorizontal="true"
+        android:text="otherInfo"
+        android:gravity="center"
+        android:padding="4dp"
+        android:layout_below="@+id/whatToFeed"/>
+</RelativeLayout>

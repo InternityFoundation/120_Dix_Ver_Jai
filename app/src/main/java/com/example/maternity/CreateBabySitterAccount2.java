@@ -47,7 +47,7 @@ public class CreateBabySitterAccount2 extends AppCompatActivity {
         nannyDetails.setRateHr(getIntent().getStringExtra("rph"));
 
         aboutMe = findViewById(R.id.babySitterAboutme);
-        password = findViewById(R.id.userPassword);
+        password = findViewById(R.id.babysitter_Password);
         gender = findViewById(R.id.genderRadioButton);
         availability = findViewById(R.id.availabilityRadioButton);
         checkBoxLocation = findViewById(R.id.locationCheck);
@@ -146,6 +146,7 @@ public class CreateBabySitterAccount2 extends AppCompatActivity {
                     nannyDetails.setAvailablity(availability2);
                     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("USERS").child("NANNY").child(nannyDetails.getPhone());
                     databaseReference.setValue(nannyDetails);
+                    Toast.makeText(CreateBabySitterAccount2.this, ""+nannyDetails, Toast.LENGTH_SHORT).show();
                 }
             }
         });
