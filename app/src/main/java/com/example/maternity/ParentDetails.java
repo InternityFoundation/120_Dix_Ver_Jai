@@ -5,28 +5,28 @@ public class ParentDetails {
     String username;
     String email;
     String availablity;
-    String prefferedDays;
     String genderOfBaby;
     String permanentAddress;
     String zipcode;
     String rateHr;
     String description;
     String profilePicture;
+    String password;
 
 
     public ParentDetails(){}
 
-    public ParentDetails(String username, String email, String availablity, String prefferedDays, String genderOfBaby, String permanentAddress, String zipcode, String rateHr, String description, String profilePicture) {
+    public ParentDetails(String username, String email, String availablity, String genderOfBaby, String permanentAddress, String zipcode, String rateHr, String description, String profilePicture, String password) {
         this.username = username;
         this.email = email;
         this.availablity = availablity;
-        this.prefferedDays = prefferedDays;
         this.genderOfBaby = genderOfBaby;
         this.permanentAddress = permanentAddress;
         this.zipcode = zipcode;
         this.rateHr = rateHr;
         this.description = description;
         this.profilePicture = profilePicture;
+        this.password = password;
     }
 
     public String getUsername() {
@@ -51,14 +51,6 @@ public class ParentDetails {
 
     public void setAvailablity(String availablity) {
         this.availablity = availablity;
-    }
-
-    public String getPrefferedDays() {
-        return prefferedDays;
-    }
-
-    public void setPrefferedDays(String prefferedDays) {
-        this.prefferedDays = prefferedDays;
     }
 
     public String getGenderOfBaby() {
@@ -107,5 +99,13 @@ public class ParentDetails {
 
     public void setProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

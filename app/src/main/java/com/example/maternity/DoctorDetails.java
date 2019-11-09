@@ -14,10 +14,11 @@ public class DoctorDetails {
     String email;
     String latitude;
     String longitude;
+    String password;
 
     public DoctorDetails(){}
 
-    public DoctorDetails(String username, String registrationNumber, String experience, String phone, String permanentAddress, String zipcode, String profilePicture, String aboutMe, String gender, String email, String latitude, String longitude) {
+    public DoctorDetails(String username, String registrationNumber, String experience, String phone, String permanentAddress, String zipcode, String profilePicture, String aboutMe, String gender, String email, String latitude, String longitude, String password) {
         this.username = username;
         this.registrationNumber = registrationNumber;
         this.experience = experience;
@@ -30,6 +31,7 @@ public class DoctorDetails {
         this.email = email;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.password = password;
     }
 
     public String getUsername() {
@@ -126,5 +128,13 @@ public class DoctorDetails {
 
     public void setLongitude(String longitude) {
         this.longitude = longitude;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
