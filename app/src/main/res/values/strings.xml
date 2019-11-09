@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Maternity</string>
+    <string name="name">Name</string>
+    <string name="dob">DOB</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="rate_hr">Rate/hr</string>
+    <string name="aadhar_id">Aadhar ID</string>
 </resources>

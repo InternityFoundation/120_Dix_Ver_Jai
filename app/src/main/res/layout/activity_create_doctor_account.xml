@@ -27,7 +27,7 @@
             android:layout_marginBottom="2dp"
             android:textColor="#ffffff"
             android:textColorHint="#ffffff"
-            android:hint="Name"
+            android:hint="@string/name"
             android:id="@+id/username"
             />
         <EditText
