@@ -46,7 +46,7 @@ public class CreateDoctorAccountActivity2 extends AppCompatActivity {
         doctorDetails.setPhone(getIntent().getStringExtra("phone"));
         doctorDetails.setRegistrationNumber(getIntent().getStringExtra("regno"));
 
-        aboutMe = findViewById(R.id.userAboutme);
+        aboutMe = findViewById(R.id.babySitterAboutme);
         password = findViewById(R.id.userPassword);
         gender = findViewById(R.id.genderRadioButton);
         checkBoxLocation = findViewById(R.id.locationCheck);

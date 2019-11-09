@@ -1,43 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ParentProfileActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
+            android:src="@drawable/profilepic"
+            />
 
         <TextView
             android:id="@+id/tvuser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:hint="username"
+            android:padding="8dp"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+
+             />
 
         <TextView
             android:id="@+id/tvemail"
             android:layout_below="@id/tvuser"
             android:layout_width="wrap_content"
+            android:padding="8dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+            android:hint="email" />
         <TextView
             android:id="@+id/tvphone"
             android:layout_below="@id/tvemail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+            android:hint="phone" />
         <TextView
             android:id="@+id/tvavail"
             android:layout_below="@id/tvphone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+            android:hint="available(part/full time)" />
         <TextView
             android:id="@+id/tvgob"
             android:layout_below="@id/tvavail"
@@ -45,31 +60,43 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:padding="8dp"
-            android:text="TextView" />
+            android:hint="gender(baby)" />
         <TextView
             android:id="@+id/tvaddress"
             android:layout_below="@id/tvgob"
             android:layout_width="wrap_content"
+            android:padding="8dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+            android:hint="address" />
+
         <TextView
-            android:id="@+id/tvzip"
-            android:layout_below="@id/tvaddress"
+            android:id="@+id/tvrate"
+            android:layout_below="@+id/tvaddress"
+            android:padding="8dp"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:hint="rate/hr" />
+
+        <TextView
+            android:id="@+id/tvzip"
+            android:layout_below="@id/tvrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+            android:hint="zipcode"/>
         <TextView
             android:id="@+id/tvdesc"
             android:layout_below="@id/tvzip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="8dp"
             android:layout_centerHorizontal="true"
-            android:text="TextView" />
+            android:hint="description" />
 
 
-    </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
